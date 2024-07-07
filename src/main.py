@@ -194,7 +194,7 @@ def home():
 def nosotros():
     return send_file("static/nosotros-responsive.html")
 
-
+# TODO: ver esto!
 # VER ESTO QUE SIGUE TAMBIEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEN
 @app.route("/images", methods=["GET", "POST"])
 def images():
