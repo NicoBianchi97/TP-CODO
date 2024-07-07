@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/icono-favicon.ico') }}" />
+    <title>La tienda del libro | Carga de productos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Redressed&display=swap"
+        rel="stylesheet" />
+</head>
+<body>
+    <!--<header>
+        <nav>
+            <div class="logo-titulo">
+                <img src="{{ url_for('static', filename='img/Logo.png') }}"  alt="Imagen del logo" class="imagen-logo" height="170" width="170" />
+                <h1 class="titulo-header">La tienda del libro</h1>
+            </div>
+
+            <ul class="lista-navegacion">
+                <li>
+                    <a class="link-menu" href="index.html">Productos</a>
+                </li>
+                <li>
+                    <a class="link-menu" href="nosotros-responsive.html">Sobre nosotros</a>
+                </li>
+                <li>
+                    <a class="link-menu" href="contacto-responsive.html">Contacto</a>
+                </li>
+                <li>
+                    <a class="link-menu" href="ubicacion-responsive.html">Ubicación</a>
+                </li>
+            </ul>
+        </nav>
+    </header>-->
+    <h1 class="titulo">Carga de productos</h1>
+    <form action="/libros" method="POST" enctype="multipart/form-data">
+        <label for="nombre_libro">Nombre del Libro:</label>
+        <input type="text" id="nombre_libro" name="nombre_libro" required><br><br>
+        
+        <label for="autor">Autor:</label>
+        <input type="text" id="autor" name="autor" required><br><br>
+        
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" step="0.01" required><br><br>
+        
+        <label for="genero">Género:</label>
+        <input type="text" id="genero" name="genero" required><br><br>
+        
+        <label for="imagen">Imagen del Libro:</label>
+        <input type="file" id="imagen" name="imagen" accept="image/*"><br><br>
+        
+        <button type="submit">Agregar Libro</button>
+        <button type="reset">Cancelar</button>
+    </form>
+    <footer>
+        <div class="contenido-footer">
+            <img src="{{ url_for('static', filename='img/Logo-nombre.png') }}"  alt="Logo de La tienda del libro" class="logo-footer" height="150"
+                width="150" />
+            <div class="p-footer">
+                <p class="texto-footer">
+                    Proyecto realizado por: Facundo Ledesma - Nicolás Bianchi Morán -
+                    Heliana Rivas - Alexis Plescia
+                </p>
+                <br />
+                <p class="texto-footer">Imágenes extraídas de Unsplash y Freepik</p>
+                <br />
+                <p class="texto-footer">
+                    Link del repositorio en Github:
+                    <a href="https://github.com/Faq89/CodoTP1.git" target="_blank">aquí</a>.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,132 @@
+
+form {
+  background-color: #fff;
+  border: 1px solid #ddbea9;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ddbea9;
+  border-radius: 5px;
+  font-family: Montserrat, cursive;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  display: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.radial-group {
+  display: flex;
+  gap: 10px;
+}
+
+.radial-group label {
+  display: inline;
+}
+
+button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #936569;
+  color: white;
+  font-family: Montserrat, cursive;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #754451;
+}
+
+button[type="reset"] {
+  background-color: #ddbea9;
+}
+
+button[type="reset"]:hover {
+  background-color: #bb9d82;
+}
+
+.logo-titulo-contacto {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+.titulo-contacto {
+  display: inline;
+  font-size: 1.7em;
+  margin: 0;
+}
+
+/* Para alinear el texto de contacto */
+.texto-contacto {
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  form {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .radial-group {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  form {
+    padding: 20px;
+    max-width: 80%;
+  }
+
+  .radial-group {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  button {
+    width: auto;
+    margin: 10px 5px;
+  }
+}

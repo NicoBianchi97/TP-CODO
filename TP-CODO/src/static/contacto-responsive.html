@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/static/img/icono-favicon.ico">
+    <title>La tienda del libro | Contacto</title>
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/style-contacto-responsive.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Redressed&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-titulo">
+                <img src="/static/img/Logo.png" alt="Imagen del logo" class="imagen-logo" height="170" width="170">
+                <h1 class="titulo-header">La tienda del libro</h1>
+            </div>
+            
+            <ul class="lista-navegacion">
+                <li><a class="link-menu" href="/static/productos-responsive.html">Productos</a></li>
+                <li><a class="link-menu" href="/static/nosotros-responsive.html">Sobre nosotros</a></li>
+                <li><a class="link-menu" href="/static/contacto-responsive.html">Contacto</a></li>
+                <li><a class="link-menu" href="/static/ubicacion-responsive.html">Ubicación</a></li>
+            </ul> 
+        </nav>
+    </header>
+    <div class="logo-titulo-contacto">
+        <img src="/static/img/Logo.png" alt="Imagen del logo" class="imagen-logo" height="120" width="120">
+        <h2 class="titulo-contacto">Contacto</h2>
+    </div>
+    <div>
+        <p class="texto-contacto">Si querés realizar una consulta contactate con nosotros completando el siguiente formulario. 
+            A la brevedad nos estaremos comunicando.</p>
+    </div>
+    <form id="consultaForm">
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+        </div>
+        <div class="form-group">
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="image">Subir Imagen:</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+        </div>
+        <div class="form-group">
+            <img id="thumbnail" class="thumbnail" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Vista previa de la imagen">
+        </div>
+        <div class="form-group">
+            <label for="tipoConsulta">Tipo de Solicitud:</label>
+            <select id="tipoConsulta" name="tipoConsulta" required>
+                <option value="" disabled selected hidden>Seleccione una opción</option>
+                <option value="queja">Queja</option>
+                <option value="consulta">Consulta</option>
+                <option value="otros">Otros</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Ingrese aquí su consulta o ingrese su queja" required></textarea>
+        </div>
+        <div class="form-group">
+            <div class="radial-group">
+                <label>
+                    <input type="radio" name="suscripcion" value="si" required> Quiero suscribirme para recibir noticias
+                </label>
+                <label>
+                    <input type="radio" name="suscripcion" value="no" required> No quiero suscribirme para recibir noticias
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit">Enviar</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+
+    <footer>
+        <div class="contenido-footer">
+            <img src="/static/img/Logo-nombre.png" alt="Logo de La tienda del libro" class="logo-footer" height="150" width="150">
+            <div class="p-footer">
+                <p class="texto-footer">Proyecto  realizado por: Facundo Ledesma - Nicolás Bianchi Morán - Heliana Rivas - Alexis Plescia</p><br>
+                <p class="texto-footer">Imágenes extraídas de Unsplash y Freepik</p><br>
+                <p class="texto-footer">Link del repositorio en Github: <a href="https://github.com/Faq89/CodoTP1.git" target="_blank">aquí</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/contacto-responsive.js"></script>
+</body>
+</html>

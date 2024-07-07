@@ -1,0 +1,107 @@
+
+main{
+    flex: 1;
+}
+
+/*UBICACION*/
+
+.contenedor-ubicacion{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.logo-titulo-ubicacion{
+    display: flex;
+}
+
+.titulo-ubicacion{
+    font-size: 1.7em;
+    margin-top: 2em;
+}
+
+.texto-ubicacion{
+    font-size: 1.1em;
+    margin: 0 7.5em;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+.mapa{
+    padding: 3em 0;
+}
+
+.mapa-contenido{
+    width:50%;
+    margin: 0 auto;
+}
+
+/*RESPONSIVE*/
+
+@media screen and (max-width: 768px) {
+    /*RESPONSIVE UBICACION*/
+
+    .logo-titulo-ubicacion{
+        margin-left: 1.8em;
+    }
+
+    .imagen-logo{
+        max-width: 50px;
+        height: auto;
+        margin-top: 1.1em;
+    }
+
+    .titulo-ubicacion{
+        font-size: 1.1em;
+        margin-top: 1.7em;
+    }
+
+    .texto-ubicacion{
+            margin: 0 3em;
+            text-align: justify;
+            font-size: 0.7em;
+    }
+
+    .mapa-contenido{
+        width: auto;
+    }
+
+    .mapa{
+        height: auto;
+        max-width: 300px;
+    }
+
+}
+@media (max-width: 1024px) and (min-width: 769px) {
+    /*SECCION UBICACION*/
+
+    .logo-titulo-ubicacion{
+        margin-left: 1.8em;
+    }
+
+    .imagen-logo{
+        max-width: 50px;
+        height: auto;
+        margin-top: 1.1em;
+    }
+
+    .titulo-ubicacion{
+        font-size: 1.1em;
+        margin-top: 1.7em;
+    }
+
+    .texto-ubicacion{
+            margin: 0 3em;
+            text-align: justify;
+            font-size: 0.8em;
+    }
+
+    .mapa-contenido{
+        width: auto;
+    }
+
+    .mapa{
+        height: auto;
+        max-width: 500px;
+    }
+}
