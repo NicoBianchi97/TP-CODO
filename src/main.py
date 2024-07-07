@@ -29,7 +29,7 @@ def get_books():
     cursor = conn.cursor(cursor_factory=extras.RealDictCursor)
 
     # ejecutar la query para obtener registros
-    cursor.execute("SELECT * FROM books")
+    cursor.execute("SELECT * FROM libros")
     books = cursor.fetchall()
 
     # cerrar el cursor y la conexión
@@ -53,7 +53,7 @@ def create_book():
     # ejecutar la query para obtener registros
     # OJO CON ESTO, CREO QUE TIENE QUE COINCIDIR CON LO DE JS, OJOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
     query = """
-    INSERT INTO books (author_id, description, language, name, rating, release_date)
+    INSERT INTO libros (author_id, description, language, name, rating, release_date)
     VALUES (%s, %s, %s, %s, %s, %s)
     RETURNING *
     """
@@ -91,7 +91,7 @@ def get_book(book_id):
 
     # ejecutar la query para obtener registros
     cursor.execute(
-        query="SELECT * FROM books WHERE book_id = %s", vars=(book_id,)
+        query="SELECT * FROM libros WHERE book_id = %s", vars=(book_id,)
     )
     book = cursor.fetchone()
     # cerrar el cursor y la conexión
@@ -189,6 +189,10 @@ def update_book_put(book_id):
 @app.get("/")
 def home():
     return send_file("static/productos-responsive.html")
+
+@app.get("/nosotros")
+def nosotros():
+    return send_file("static/nosotros-responsive.html")
 
 
 # VER ESTO QUE SIGUE TAMBIEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEN

@@ -27,18 +27,18 @@ services:
     depends_on:
       - tpo14_postgres
   
-  # tpo14_backend:
-  #   image: cac-24262-backend
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile
-  #   container_name: tpo14_backend
-  #   volumes:
-  #     - ./src:/app
-  #   ports:
-  #     - 5000:8080
-  #   env_file:
-  #     - .env
+  tpo14_backend:
+    image: cac-24262-backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tpo14_backend
+    volumes:
+      - ./src:/app
+    ports:
+      - 8080:8080
+    env_file:
+      - docker.env
 
 networks:
   default:
