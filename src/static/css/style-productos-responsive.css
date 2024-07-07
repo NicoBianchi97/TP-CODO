@@ -1,0 +1,84 @@
+
+main{
+    flex: 1;
+}
+
+.logo-titulo-productos{
+    display: flex;
+}
+
+
+.titulo-productos{
+    font-size: 1.7em;
+    margin-top: 2em;
+}
+
+.productos{
+    display: flex;
+    gap: 3em;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0 5em 2em 5em;
+    padding: 2em 2em 2em 8em;
+}
+
+.producto-libro{
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content;
+    align-items: center;
+}
+
+.imagen-libro{
+    max-width: 250px;
+    height: auto;
+    display: block;
+}
+
+.descripcion-libro{
+    max-width: 200px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 1em;
+    line-height: 1.5;
+}
+
+
+/*RESPONSIVE*/
+
+@media screen and (max-width: 768px) {
+
+    .titulo-productos{
+        font-size: 1.1em;
+        margin-top: 1.7em;
+    }
+    
+    .imagen-libro{
+        max-width: 170px;
+        height: auto;
+        display: block;
+    }
+
+    .productos{
+        margin: 1em;
+        padding: 0.5em;
+    }
+
+    .descripcion-libro{
+        font-size: 0.7em;
+    }
+}
+@media (max-width: 1024px) and (min-width: 769px) {
+
+    /*SECCION PRODUCTOs*/
+    .productos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 2em;
+        padding: 2em;
+    }
+}

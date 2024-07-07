@@ -1,3 +1,10 @@
+CREATE TABLE authors (
+	author_id SERIAL PRIMARY KEY,
+	first_name VARCHAR(50),
+	last_name VARCHAR(50),
+	birth_date DATE
+);
+
 CREATE TABLE movies (
 	movie_id SERIAL PRIMARY KEY,
 
@@ -9,13 +16,6 @@ CREATE TABLE movies (
 
 	author_id INTEGER,
 	FOREIGN KEY (author_id) REFERENCES authors(author_id)
-);
-
-CREATE TABLE authors (
-	author_id SERIAL PRIMARY KEY,
-	first_name VARCHAR(50),
-	last_name VARCHAR(50),
-	birth_date DATE
 );
 
 create table if not exists characters (

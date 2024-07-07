@@ -1,0 +1,49 @@
+version: "3.8"
+
+services:
+  tpo14_postgres:
+    image: postgres:16-alpine
+    container_name: tpo14_postgres
+    ports:
+      - 15432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: tpo14_app
+    volumes:
+      - tpo14_postgres:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  tpo14_pgadmin:
+    image: dpage/pgadmin4
+    container_name: tpo14_pgadmin
+    ports:
+      - 5050:80
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: password
+    volumes:
+      - tpo14_pgadmin:/var/lib/pgadmin
+    depends_on:
+      - tpo14_postgres
+  
+  # tpo14_backend:
+  #   image: cac-24262-backend
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   container_name: tpo14_backend
+  #   volumes:
+  #     - ./src:/app
+  #   ports:
+  #     - 5000:8080
+  #   env_file:
+  #     - .env
+
+networks:
+  default:
+    name: tpo14_network
+
+volumes:
+  tpo14_postgres:
+  tpo14_pgadmin:
