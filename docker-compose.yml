@@ -26,7 +26,7 @@ services:
       - tpo14_pgadmin:/var/lib/pgadmin
     depends_on:
       - tpo14_postgres
-  
+
   tpo14_backend:
     image: cac-24262-backend
     build:
@@ -39,6 +39,8 @@ services:
       - 8080:8080
     env_file:
       - docker.env
+    depends_on:
+      - tpo14_postgres
 
 networks:
   default:
